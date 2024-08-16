@@ -17,5 +17,15 @@ submitBtn.addEventListener('click', () => {
       password.style.outline = '1px solid red';
       confirmPassword.style.outline = '1px solid red';
       return
+   }else if(password.value == "" && confirmPassword.value == "") {
+      error.innerHTML = '*insert password'
+      error.style.color = 'red'
+      error.style.fontSize = '.7rem';
+      password.style.outline = '1px solid red';
+      confirmPassword.style.outline = '1px solid red';
+   }else {
+      error.innerHTML = '';
+      password.style.outline = '1px solid green';
+      confirmPassword.style.outline = '1px solid green';
    }
 })
